@@ -1,0 +1,30 @@
+.Container{
+    padding: 20px;
+}
+.Container button{
+    outline: none;
+    border: 2px dashed red;
+    font-weight: 800;
+    font-size: 24px;
+    background-color: black;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.Container button:not(:last-child){
+    margin-right: 20px;
+}
+.Container button:hover,
+.Container button:focus{
+    background-color: #fff;
+    border: 2px dashed black;
+    color: black;
+}
+.Count{
+    list-style: none;
+
+}
+.text{
+font-size: 18px;
+font-weight: 600;
+}
