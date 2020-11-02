@@ -35,6 +35,7 @@ class App extends Component {
     return positive
   }
   render() {
+    const {good, neutral, bad} = this.state;
     return (
       <>
         <Section title={"Please leave feedback"}>
@@ -42,11 +43,9 @@ class App extends Component {
         </Section>
         <Section title={"Statistics"}>
           {this.countTotalFeedback() > 0 ? 
-             (<Statistics good={this.state.good} neutral={this.state.neutral} 
-             bad={this.state.bad} total={this.countTotalFeedback()} positive={this.countPositiveFeedbackPercentage()} />) : (<Notification message="No feedback given" />)}
-          
-
-          
+             (<Statistics good={good} neutral={neutral} 
+             bad={bad} total={this.countTotalFeedback()} positive={this.countPositiveFeedbackPercentage()} />) 
+             : (<Notification message="No feedback given" />)}
         </Section>
       </>
     );
@@ -64,6 +63,7 @@ FeedBack.PropTypes = {
   neutralNun: PropTypes.func.isRequired,
   badNun: PropTypes.func.isRequired,
   total: PropTypes.func.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 }
 
