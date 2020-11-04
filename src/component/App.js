@@ -5,6 +5,7 @@ import Section from './Section/Section';
 import Notification from './Notification/Notification';
 import PropTypes from "prop-types";
 
+
 class App extends Component {
   state = {
     good: 0,
@@ -53,17 +54,4 @@ class App extends Component {
 }
 
 export default App;
-
-FeedBack.PropTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  positive: PropTypes.number.isRequired,
-  goodNun: PropTypes.func.isRequired,
-  neutralNun: PropTypes.func.isRequired,
-  badNun: PropTypes.func.isRequired,
-  total: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
-}
 

@@ -13,3 +13,9 @@ const FeedBack = ({badNun, goodNun, neutralNun}) => {
 };
 
 export default FeedBack;
+
+FeedBack.propTypes = {
+    goodNun: PropTypes.func.isRequired,
+    neutralNun: PropTypes.func.isRequired,
+    badNun: PropTypes.func.isRequired,
+}
